@@ -13,7 +13,7 @@ wss.on('connection', function(socket) {
   console.log('a user connected');
   if (socket.readyState === WebSocket.OPEN) {
     const protocol = socket.protocol;
-    const path = './data' + protocol.replace(/_/g, '/');
+    const path = './data/' + protocol.replace(/_/g, '/');
     const dbPath = path + 'db.json';
 
     if (!fs.existsSync(path)) {
@@ -40,7 +40,7 @@ wss.on('connection', function(socket) {
   }
   socket.on("message", function(message) {
     const protocol = socket.protocol;
-    const path = './data' + protocol.replace(/_/g, '/');
+    const path = './data/' + protocol.replace(/_/g, '/');
     const dbPath = path + 'db.json';
 
     const adapter = new FileSync(dbPath);
