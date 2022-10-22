@@ -3,9 +3,8 @@
   "version": "0.0.1",
   "description": "chat with other shoppers",
   "dependencies": {
-    "express": "^4.18.1",
-    "image-data-uri": "^2.0.1",
+    "express": "^4.18.2",
     "lowdb": "^1.0.0",
-    "ws": "^8.6.0"
+    "ws": "^7.5.9"
   }
 }
